@@ -66,7 +66,7 @@ final class TailscaleManager {
         await refreshStatus()
     }
 
-    private func runTailscale(_ arguments: [String]) async throws -> String {
+    nonisolated private func runTailscale(_ arguments: [String]) async throws -> String {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: tailscalePath)
         process.arguments = arguments
