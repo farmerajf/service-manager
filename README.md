@@ -8,6 +8,12 @@
 
 ---
 
+## Why?
+
+I build a lot of custom services — particularly [MCP servers](https://modelcontextprotocol.io/) that give AI assistants access to things like Apple Reminders, Calendar, Obsidian, and more. Each one needs to be running locally, and many need to be exposed over the internet via a reverse proxy so they can be reached from remote clients.
+
+Managing all of this by hand gets old fast: starting each service in its own terminal tab, remembering which ports map to which Tailscale funnel paths, restarting things when they crash. Service Manager puts it all in one place — services and their reverse proxy mappings side by side, running quietly in the menu bar.
+
 ## Features
 
 - **Menu bar app** — runs in the background, configure via the menu bar icon
