@@ -13,6 +13,14 @@ final class ServiceManager {
         return runner
     }
 
+    var runningCount: Int {
+        runners.values.filter {
+            if case .running = $0.status { return true }
+            if case .starting = $0.status { return true }
+            return false
+        }.count
+    }
+
     func removeRunner(for id: UUID) {
         if let runner = runners[id] {
             runner.stop()

@@ -17,10 +17,10 @@ struct ConsoleView: View {
                                 .foregroundStyle(entry.stream == .stderr ? .red : .primary)
                         }
                         .font(.system(.body, design: .monospaced))
-                        .textSelection(.enabled)
                         .id(entry.id)
                     }
                 }
+                .textSelection(.enabled)
                 .padding(8)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

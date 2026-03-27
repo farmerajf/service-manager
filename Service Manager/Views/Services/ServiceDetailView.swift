@@ -40,7 +40,7 @@ struct ServiceDetailView: View {
                         .frame(height: 16)
 
                     Button(action: { runner.clearLogs() }) {
-                        Image(systemName: "trash")
+                        Image(systemName: "eraser")
                     }
 
                     Button(action: { showEditSheet = true }) {
